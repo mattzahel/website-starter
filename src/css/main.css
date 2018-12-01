@@ -1,0 +1,25 @@
+/* variables, e.g. $black */
+/* @keyframes */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif; }
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* e.g. .heading-primary */
+/* e.g. .margin-big */
+/* e.g. slider */
+/* e.g. header */
+/* e.g. home page */
+
+/*# sourceMappingURL=maps/main.css.map */
