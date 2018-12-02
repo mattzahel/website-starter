@@ -1,7 +1,16 @@
 # website starter :open_file_folder:
 ## Features
 - Basic HTML5 template
-- Configured Sass (SCSS) compiling to single CSS file
+- Configured Gulp task runner
+   - browser-sync
+   - sass (scss) compiler
+   - sourcemaps
+   - autoprefixer
+   - cleanCSS (CSS minify)
+   - cleanCSS (JS minify)
+   - css, js concat
+   - img minify
+   - html minify
 - Simple folders structure 
 - Quick setup
 
@@ -17,11 +26,14 @@ cd website-starter
 npm install
 ```
 
-### Watch and compile .scss files
+### Compile SCSS and serve with auto-reload
 ```
-cd sass
-npm run scss
+gulp
 ```
 
----
-Your project is ready to go! :computer:
+> Your project is ready to go! :computer:
+
+### Build project
+```
+gulp build
+```
