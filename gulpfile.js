@@ -12,6 +12,7 @@ var htmlReplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
 var del = require('del');
 var sequence = require('run-sequence');
+var plumber = require('gulp-plumber');
 
 var config = {
     dist: 'dist/',
@@ -47,7 +48,8 @@ gulp.task('serve', ['sass'], function() {
 })
 
 gulp.task('sass', function() {
-    return gulp.src(config.scssin)
+    gulp.src(config.scssin)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass().on('erorr', sass.logError))
         .pipe(autoprefixer({
