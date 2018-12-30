@@ -11,6 +11,7 @@
    - css, js concat
    - img minify
    - html minify
+   - plumber
 - Simple folders structure 
 - Quick setup
 
