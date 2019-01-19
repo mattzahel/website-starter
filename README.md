@@ -12,6 +12,7 @@
    - img minify
    - html minify
    - plumber
+   - gulp-gh-pages (remove 'dist/' from .gitignore before using)
 - Simple folders structure 
 - Quick setup
 
@@ -38,6 +39,11 @@ gulp
 ```
 gulp build
 ```
+
+### Deploy dist folder to Github Pages 
+- create 'gh-pages' branch on remote
+- build `` gulp build ``
+- deploy `` gulp deploy ``
 
 --- 
 

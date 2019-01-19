@@ -13,6 +13,7 @@ var htmlMin = require('gulp-htmlmin');
 var del = require('del');
 var sequence = require('run-sequence');
 var plumber = require('gulp-plumber');
+var deploy = require('gulp-gh-pages');
 
 var config = {
     dist: 'dist/',
@@ -102,5 +103,10 @@ gulp.task('clean', function(){
 gulp.task('build', function() {
     sequence('clean', ['html', 'css', 'js', 'img']);
 })
+
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy());
+  });
 
 gulp.task('default', ['serve']);
