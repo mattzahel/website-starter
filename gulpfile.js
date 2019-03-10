@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var babel = require('gulp-babel');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -71,7 +72,12 @@ gulp.task('css', function() {
 gulp.task('js', function() {
     return gulp.src(config.jsin)
         .pipe(concat(config.jsoutname))
-        .pipe(uglify())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify().on('error', function(e){
+            console.log(e);
+         }))
         .pipe(gulp.dest(config.jsout));
 })
 
